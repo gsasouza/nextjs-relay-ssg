@@ -4,7 +4,7 @@ import { RelayNetworkLayer, urlMiddleware } from 'react-relay-network-modern';
 
 const network = new RelayNetworkLayer([
   urlMiddleware({
-    url: 'http://localhost:3000/api/graphql',
+    url: process.env.NEXT_GRAPHQL_URL as string,
   }),
 ]);
 
